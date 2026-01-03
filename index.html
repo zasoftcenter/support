@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小提醒 - 技术支持</title>
+    <title>ZASoft - 技术支持与隐私政策</title>
     <style>
         * {
             margin: 0;
@@ -13,64 +12,136 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: #f5f5f7;
             padding: 20px;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             padding: 40px;
-            margin-top: 40px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
         }
         
         h1 {
-            color: #667eea;
-            margin-bottom: 10px;
+            color: #1d1d1f;
             font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
         
         .subtitle {
-            color: #666;
-            margin-bottom: 30px;
+            color: #86868b;
             font-size: 1.1em;
+            margin-top: 10px;
+        }
+        
+        .nav {
+            background: #f5f5f7;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        
+        .nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .nav a {
+            color: #007aff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        
+        .nav a:hover {
+            background: rgba(0, 122, 255, 0.1);
         }
         
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
+            scroll-margin-top: 100px;
         }
         
         .section h2 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            border-bottom: 2px solid #667eea;
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin-bottom: 20px;
             padding-bottom: 10px;
+            border-bottom: 2px solid #007aff;
+            font-weight: 600;
+        }
+        
+        .section h3 {
+            color: #1d1d1f;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            color: #515154;
+        }
+        
+        .section ul, .section ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+            color: #515154;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background: #f5f5f7;
+            border-left: 4px solid #007aff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
         
         .contact-item {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f8f9fa;
+            background: #f5f5f7;
+            padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #667eea;
+            margin-bottom: 15px;
         }
         
         .contact-item strong {
-            color: #667eea;
+            color: #1d1d1f;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 1.1em;
         }
         
         .contact-item a {
-            color: #667eea;
+            color: #007aff;
             text-decoration: none;
         }
         
@@ -78,92 +149,315 @@
             text-decoration: underline;
         }
         
-        .app-info {
-            background: #f0f4ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        
-        .app-info p {
-            margin-bottom: 10px;
-        }
-        
         .footer {
             text-align: center;
-            color: #666;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+            color: #86868b;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 0.9em;
         }
         
-        @media (max-width: 600px) {
+        .badge {
+            display: inline-block;
+            background: #007aff;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
             .container {
                 padding: 20px;
-                margin-top: 20px;
+                margin-top: 10px;
             }
             
             h1 {
                 font-size: 2em;
+            }
+            
+            .section h2 {
+                font-size: 1.5em;
+            }
+            
+            .nav ul {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🌟 小提醒</h1>
-        <p class="subtitle">TinyRemind - 技术支持</p>
+        <header>
+            <h1>ZASoft</h1>
+            <p class="subtitle">专业的 iOS 应用开发团队</p>
+        </header>
         
-        <div class="app-info">
-            <p><strong>应用名称：</strong>小提醒 (TinyRemind)</p>
-            <p><strong>应用类型：</strong>习惯追踪与目标管理</p>
-            <p><strong>平台：</strong>iOS</p>
-        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#privacy">隐私政策</a></li>
+                <li><a href="#terms">服务条款</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
         
-        <div class="section">
-            <h2>📧 联系方式</h2>
+        <!-- 关于我们 -->
+        <section id="about" class="section">
+            <h2>关于我们</h2>
+            <p>ZASoft 是一家专注于 iOS 应用开发的团队，致力于为用户提供优质、实用的移动应用体验。</p>
+            
+            <div class="highlight-box">
+                <h3>我们的使命</h3>
+                <p>通过创新的技术和用心的设计，帮助用户提高生活效率，实现个人目标，让每一天都更加充实和有意义。</p>
+            </div>
+            
+            <h3>我们的应用</h3>
+            <p>ZASoft 开发的应用涵盖多个领域，包括但不限于：</p>
+            <ul>
+                <li>生产力工具</li>
+                <li>健康与健身</li>
+                <li>生活助手</li>
+                <li>效率管理</li>
+            </ul>
+            
+            <p>所有应用均遵循 Apple 的设计规范和隐私保护标准，确保用户数据安全和隐私权益。</p>
+        </section>
+        
+        <!-- 隐私政策 -->
+        <section id="privacy" class="section">
+            <h2>隐私政策 <span class="badge">重要</span></h2>
+            <p style="color: #86868b; margin-bottom: 25px;">最后更新：2025年1月2日</p>
+            
+            <p>ZASoft（以下简称"我们"）非常重视您的隐私保护。本隐私政策说明了我们如何收集、使用、存储和保护您的个人信息。</p>
+            
+            <h3>1. 信息收集</h3>
+            <p>我们遵循最小化数据收集原则，仅收集应用功能所必需的信息：</p>
+            
+            <div class="highlight-box">
+                <h4>我们收集的信息类型：</h4>
+                <ul>
+                    <li><strong>应用使用数据</strong>：为了改进应用功能和用户体验，我们可能会收集匿名的使用统计信息（如功能使用频率、崩溃报告等）。这些信息不包含任何个人身份信息。</li>
+                    <li><strong>设备信息</strong>：我们可能会收集设备类型、操作系统版本等匿名信息，用于优化应用兼容性。</li>
+                    <li><strong>位置信息</strong>：某些应用功能可能需要访问您的位置信息（如天气服务）。我们仅在您明确授权的情况下收集位置信息，且仅用于提供相关功能服务。</li>
+                </ul>
+            </div>
+            
+            <h3>2. 信息使用</h3>
+            <p>我们使用收集的信息仅用于以下目的：</p>
+            <ul>
+                <li>提供和改进应用功能</li>
+                <li>分析应用使用情况，优化用户体验</li>
+                <li>修复技术问题和错误</li>
+                <li>确保应用安全运行</li>
+            </ul>
+            
+            <h3>3. 数据存储</h3>
+            <p>我们采用以下方式保护您的数据：</p>
+            <ul>
+                <li><strong>本地存储</strong>：您的个人数据（如习惯记录、任务列表等）主要存储在您的设备上，我们无法直接访问。</li>
+                <li><strong>iCloud 同步</strong>：如果您启用了 iCloud 同步功能，数据会存储在您的私有 iCloud 账户中。我们无法访问您的 iCloud 数据。</li>
+                <li><strong>加密保护</strong>：所有数据传输均采用加密技术，确保数据安全。</li>
+            </ul>
+            
+            <h3>4. 第三方服务</h3>
+            <p>我们的应用可能会使用以下第三方服务：</p>
+            <ul>
+                <li><strong>Apple iCloud</strong>：用于数据同步服务（可选功能）。数据存储在您的私有 iCloud 账户中，受 Apple 隐私政策保护。</li>
+                <li><strong>Google AdMob</strong>：用于在免费版应用中显示广告。AdMob 可能会收集设备标识符和广告标识符，用于提供个性化广告。您可以随时在设备设置中限制广告跟踪。</li>
+                <li><strong>Apple StoreKit</strong>：用于处理应用内购买。支付信息由 Apple 处理，我们不会收集或存储您的支付信息。</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>重要提示</strong>：我们不会向第三方出售、交易或转让您的个人信息。我们仅在以下情况下可能会共享信息：</p>
+                <ul>
+                    <li>法律要求或法律程序要求时</li>
+                    <li>保护我们的权利、财产或安全时</li>
+                    <li>经您明确同意的情况下</li>
+                </ul>
+            </div>
+            
+            <h3>5. 您的权利</h3>
+            <p>您对自己的个人信息享有以下权利：</p>
+            <ul>
+                <li><strong>访问权</strong>：您可以随时查看和访问您的个人信息。</li>
+                <li><strong>更正权</strong>：您可以更正或更新您的个人信息。</li>
+                <li><strong>删除权</strong>：您可以删除应用中的所有数据。删除后，数据将无法恢复。</li>
+                <li><strong>撤回同意</strong>：您可以随时撤回对数据处理的同意。</li>
+                <li><strong>限制处理</strong>：您可以要求限制对您个人信息的处理。</li>
+            </ul>
+            
+            <h3>6. 数据安全</h3>
+            <p>我们采取合理的技术和管理措施保护您的个人信息安全：</p>
+            <ul>
+                <li>使用加密技术保护数据传输</li>
+                <li>定期进行安全评估和更新</li>
+                <li>限制员工访问个人信息的权限</li>
+                <li>遵循行业最佳安全实践</li>
+            </ul>
+            
+            <h3>7. 儿童隐私</h3>
+            <p>我们的应用不面向 13 岁以下的儿童。我们不会故意收集儿童的个人信息。如果您是儿童的父母或监护人，发现我们收集了儿童信息，请立即联系我们，我们将尽快删除相关信息。</p>
+            
+            <h3>8. 隐私政策更新</h3>
+            <p>我们可能会不定期更新本隐私政策。更新后的隐私政策将在本页面发布，并更新"最后更新"日期。我们建议您定期查看本隐私政策，以了解我们如何保护您的信息。</p>
+            
+            <h3>9. 联系我们</h3>
+            <p>如果您对本隐私政策有任何疑问、意见或投诉，请通过以下方式联系我们：</p>
+            <ul>
+                <li>邮箱：<a href="mailto:zasoft@163.com">zasoft@163.com</a></li>
+                <li>我们会在收到您的询问后 24-48 小时内回复</li>
+            </ul>
+        </section>
+        
+        <!-- 服务条款 -->
+        <section id="terms" class="section">
+            <h2>服务条款</h2>
+            <p style="color: #86868b; margin-bottom: 25px;">最后更新：2025年1月2日</p>
+            
+            <p>欢迎使用 ZASoft 开发的应用。使用我们的应用即表示您同意遵守以下服务条款。如果您不同意这些条款，请不要使用我们的应用。</p>
+            
+            <h3>1. 使用许可</h3>
+            <p>在遵守本服务条款的前提下，我们授予您有限的、非独占的、不可转让的许可，允许您在个人设备上下载、安装和使用我们的应用。</p>
+            
+            <h3>2. 使用限制</h3>
+            <p>您同意不会：</p>
+            <ul>
+                <li>复制、修改、分发、出售或租赁应用或其任何部分</li>
+                <li>对应用进行反向工程、反编译或反汇编</li>
+                <li>移除应用中的任何版权、商标或其他专有声明</li>
+                <li>使用应用从事任何非法活动</li>
+                <li>干扰或破坏应用的服务或服务器</li>
+            </ul>
+            
+            <h3>3. 应用内购买</h3>
+            <p>某些应用功能可能需要付费订阅或一次性购买：</p>
+            <ul>
+                <li>所有购买均通过 Apple App Store 处理</li>
+                <li>价格可能会因地区而异</li>
+                <li>订阅会自动续费，除非您在订阅期结束前至少 24 小时取消</li>
+                <li>您可以在 App Store 账户设置中管理订阅</li>
+                <li>购买后，您可以在任何已登录相同 Apple ID 的设备上使用已购买的功能</li>
+            </ul>
+            
+            <h3>4. 退款政策</h3>
+            <p>根据 Apple 的政策，应用内购买通常不可退款。如果您对购买有疑问，请联系 Apple 客户支持或通过 App Store 申请退款。</p>
+            
+            <h3>5. 用户内容</h3>
+            <p>您在使用应用时创建的所有内容（如习惯记录、任务列表等）归您所有。我们不会访问、使用或分享您的个人内容，除非：</p>
+            <ul>
+                <li>您明确授权我们这样做</li>
+                <li>法律要求</li>
+                <li>为了提供应用功能（如 iCloud 同步）</li>
+            </ul>
+            
+            <h3>6. 免责声明</h3>
+            <div class="highlight-box">
+                <p>应用按"现状"提供，不提供任何明示或暗示的保证。我们不保证：</p>
+                <ul>
+                    <li>应用将满足您的所有需求</li>
+                    <li>应用将无错误、无中断或安全</li>
+                    <li>应用中的任何信息将准确或可靠</li>
+                </ul>
+            </div>
+            
+            <h3>7. 责任限制</h3>
+            <p>在法律允许的最大范围内，ZASoft 不对因使用或无法使用应用而产生的任何直接、间接、偶然、特殊或后果性损害承担责任。</p>
+            
+            <h3>8. 服务变更</h3>
+            <p>我们保留随时修改、暂停或终止应用或其任何部分的权利，无需事先通知。我们不对任何修改、暂停或终止承担责任。</p>
+            
+            <h3>9. 知识产权</h3>
+            <p>应用及其所有内容（包括但不限于文本、图形、徽标、图标、图像、音频和软件）均为 ZASoft 或其许可方的财产，受版权、商标和其他知识产权法保护。</p>
+            
+            <h3>10. 适用法律</h3>
+            <p>本服务条款受中华人民共和国法律管辖。任何争议应通过友好协商解决；协商不成的，应提交有管辖权的人民法院解决。</p>
+            
+            <h3>11. 条款更新</h3>
+            <p>我们可能会不定期更新本服务条款。更新后的条款将在本页面发布。继续使用应用即表示您接受更新后的条款。</p>
+        </section>
+        
+        <!-- 联系我们 -->
+        <section id="contact" class="section">
+            <h2>联系我们</h2>
+            <p>如果您在使用我们的应用时遇到任何问题，或有任何建议和反馈，我们非常乐意听到您的声音。</p>
+            
             <div class="contact-item">
-                <strong>邮箱：</strong>
-                <a href="mailto:your-email@example.com">your-email@example.com</a>
-                <p style="margin-top: 5px; color: #666; font-size: 0.9em;">
-                    请将 "your-email@example.com" 替换为你的实际邮箱地址
+                <strong>📧 邮箱支持</strong>
+                <p>
+                    <a href="mailto:zasoft@163.com">zasoft@163.com</a>
+                </p>
+                <p style="margin-top: 10px; color: #86868b; font-size: 0.9em;">
+                    我们会尽快回复您的邮件
                 </p>
             </div>
-        </div>
-        
-        <div class="section">
-            <h2>❓ 常见问题</h2>
+            
             <div class="contact-item">
-                <strong>Q: 如何恢复购买？</strong>
-                <p>A: 在应用的"设置"页面，点击"恢复购买"按钮即可。</p>
-            </div>
-            <div class="contact-item">
-                <strong>Q: 数据会丢失吗？</strong>
-                <p>A: 不会。应用支持 iCloud 同步，你的数据会自动备份到 iCloud。</p>
-            </div>
-            <div class="contact-item">
-                <strong>Q: 如何反馈问题或建议？</strong>
-                <p>A: 请通过上述邮箱联系我们，我们会在 24-48 小时内回复。</p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>📱 App Store</h2>
-            <div class="contact-item">
+                <strong>📱 App Store</strong>
+                <p>您也可以通过 App Store 的应用页面联系我们：</p>
                 <p>
-                    <a href="https://apps.apple.com/app/id6757321314" target="_blank">
-                        在 App Store 中查看小提醒
+                    <a href="https://apps.apple.com/developer/zasoft" target="_blank">
+                        在 App Store 中查看 ZASoft 的应用
                     </a>
                 </p>
             </div>
-        </div>
+            
+            <h3>常见问题</h3>
+            
+            <div class="highlight-box">
+                <h4>Q: 如何恢复购买？</h4>
+                <p>A: 在应用的"设置"或"账户"页面，找到"恢复购买"选项并点击。系统会自动恢复您之前购买的内容。</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Q: 数据会丢失吗？</h4>
+                <p>A: 不会。我们的应用支持 iCloud 同步功能，您的数据会自动备份到 iCloud。即使更换设备，只要登录相同的 Apple ID，数据就会自动恢复。</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Q: 如何取消订阅？</h4>
+                <p>A: 您可以在 iPhone 的"设置" → "Apple ID" → "订阅"中管理所有订阅，包括取消自动续费。</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Q: 应用崩溃怎么办？</h4>
+                <p>A: 请尝试以下步骤：1) 重启应用；2) 重启设备；3) 更新到最新版本；4) 如果问题持续，请通过邮箱联系我们，并提供详细的错误描述。</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Q: 如何反馈功能建议？</h4>
+                <p>A: 我们非常欢迎您的建议！请通过邮箱联系我们，详细描述您希望添加的功能。我们会认真考虑每一个建议。</p>
+            </div>
+        </section>
         
-        <div class="footer">
-            <p>感谢您使用小提醒！</p>
-            <p style="margin-top: 10px; font-size: 0.9em; color: #999;">
-                我们会持续改进应用，为您提供更好的体验。
+        <footer class="footer">
+            <p>&copy; 2025 ZASoft. 保留所有权利。</p>
+            <p style="margin-top: 10px;">感谢您使用 ZASoft 开发的应用！</p>
+            <p style="margin-top: 5px; font-size: 0.85em; color: #86868b;">
+                我们致力于持续改进，为您提供更好的体验。
             </p>
-        </div>
+        </footer>
     </div>
+    
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
